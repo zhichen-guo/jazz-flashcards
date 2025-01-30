@@ -2,7 +2,7 @@
     <div>
         <h1 class="text-3xl font-bold underline">Flashcards App Template</h1>
         <div class="text-center">
-            <a href="/flashcards">Go to flashcards!</a>
+            <a href="/flashcards">Start Practicing</a>
         </div>
     </div>
 </div>
