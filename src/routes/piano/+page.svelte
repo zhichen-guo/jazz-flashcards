@@ -2,4 +2,6 @@
 	import { Piano } from 'svelte-piano'
 </script>
 
-<Piano --height="310px" --width="794px" s/>
+<div class="flex justify-center">
+	<Piano --height="310px" --width="794px"/>
+</div>

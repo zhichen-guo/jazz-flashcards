@@ -4,7 +4,7 @@
 </script>
 
 <div class="h-full">
-    <Nav selected="cards"/>
+    <Nav selected="piano"/>
 
     <div>
         {@render children()}
