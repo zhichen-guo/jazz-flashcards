@@ -3,6 +3,7 @@
     import { Tween } from "svelte/motion";
     import { cubicOut } from "svelte/easing";
     import { fly, scale } from "svelte/transition";
+    import { Piano } from "svelte-piano";
     const { data } = $props();
     let shuffled = $state(false);
     let index = $state(0);
@@ -29,13 +30,13 @@
 
     function onkeydown(event) {
         switch(event.keyCode) {
-            case 37:
+            case 90:
                 change_card("backward")
                 break;
-            case 39:
+            case 67:
                 change_card("forward")
                 break;
-            case 32:
+            case 88:
                 flipped = !flipped;
                 break;
         }
@@ -58,10 +59,13 @@
     {/if}
 {/snippet}
 
-<h1 class="text-3xl font-bold text-center pt-8 pb-10">{data.set.name}</h1>
-<div class="flex items-center justify-center py-8">
+<h1 class="text-3xl font-bold text-center pt-8 pb-5">{data.set.name}</h1>
+<div class="flex items-center justify-center gap-x-5 pb-8">
+    <button onclick={(event) => {event.target.blur(); change_card("backward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        &#8592; <span class="opacity-75">(Z)</span>
+    </button>
     <div>
-        <div class="relative h-60 w-96">
+        <div class="relative h-60 w-96" onclick={(event) => {event.target.blur(); flipped = !flipped;}}>
             {#key shuffled}
                 <div in:scale={{ start: 0.3, opacity: 0.1 }} out:scale={{ start: 0.3, opacity: 0.1 }}>
                 {#key card}
@@ -86,30 +90,27 @@
             {/key}
         </div>
 
-        <div class="grid grid-cols-5 gap-3 pt-3 w-96">
-            <div class="text-center">
+        <div class="grid grid-cols-12 gap-3 pt-3 w-96">
+            <p class="col-span-12 text-center text-gray-500">click on the card or use (X) to flip the card</p>
+            <div class="col-span-2 text-center">
                 <p>{index + 1} / {data.set.size}</p>
             </div>
-            <div class="col-span-4">
-                <progress class="w-full h-3 rounded" max={data.set.size - 1} value={progress.current}/>
+            <div class="col-span-7">
+                <progress class="w-full h-3 rounded" max={data.set.size - 1} value={progress.current}></progress>
             </div>
-
-            <button onclick={(event) => {event.target.blur(); change_card("backward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                &#8592;
-            </button>
-            <button onclick={(event) => {event.target.blur(); flipped = !flipped}} class="col-span-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                <p>{ flipped ? "hide" : "show" } answer <span class="opacity-75">(space)</span></p>
-            </button>
-            <button onclick={(event) => {event.target.blur(); change_card("forward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                &#8594;
-            </button>
-        
-            <div class="col-end-6 col-span-2 text-right">
+            <div class="col-span-3 text-right">
                 <input type="checkbox" name="shuffle" checked={shuffled} onclick={(event) => {event.target.blur(); shuffle()}}/>
                 <label for="shuffle">Shuffle</label>
             </div>
         </div>
     </div>
+    <button onclick={(event) => {event.target.blur(); change_card("forward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <span class="opacity-75">(C)</span> &#8594;
+    </button>
+</div>
+
+<div class="flex justify-center">
+	<Piano --height="310px" --width="794px"/>
 </div>
 
 <svelte:window {onkeydown} />
