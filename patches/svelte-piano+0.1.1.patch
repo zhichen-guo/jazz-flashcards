@@ -56,9 +56,21 @@ index 15a87dd..44859d4 100644
  <style>.keyboard {
    display: flex;
 diff --git a/node_modules/svelte-piano/dist/QwertyKeyboard.js b/node_modules/svelte-piano/dist/QwertyKeyboard.js
-index aa4415f..523a601 100644
+index aa4415f..8b16cf8 100644
 --- a/node_modules/svelte-piano/dist/QwertyKeyboard.js
 +++ b/node_modules/svelte-piano/dist/QwertyKeyboard.js
+@@ -76,9 +76,9 @@ export class QwertyKeyboard {
+             rows: 1,
+             priority: 'last',
+             rootNote: 60,
+-            octaveControls: true,
++            octaveControls: false,
+             octave: 0,
+-            velocityControls: true,
++            velocityControls: false,
+             velocity: 127,
+             keys: [],
+             buffer: [],
 @@ -133,7 +133,8 @@ export class QwertyKeyboard {
      //*        Mapping
      //*=======================
