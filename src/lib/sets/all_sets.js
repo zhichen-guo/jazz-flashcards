@@ -4,6 +4,8 @@ import maj_3_7 from './maj-3-7.js';
 import maj_7_3 from './maj-7-3.js';
 import min_3_7 from './min-3-7.js';
 import min_7_3 from './min-7-3.js';
+import dom_3_7 from './dom-3-7.js';
+import dom_7_3 from './dom-7-3.js';
 
 export const names_to_slug = [
     {
@@ -30,6 +32,14 @@ export const names_to_slug = [
         name: "Minor Chords (7-3 Voicings)",
         slug: "min-7-3"
     },
+    {
+        name: "Dominant Chords (3-7 Voicings)",
+        slug: "dom-3-7"
+    },
+    {
+        name: "Dominant Chords (7-3 Voicings)",
+        slug: "dom-7-3"
+    },
 ]
 
 const slugs_to_set = {
@@ -38,7 +48,9 @@ const slugs_to_set = {
     "maj-3-7": maj_3_7,
     "maj-7-3": maj_7_3,
     "min-3-7": min_3_7,
-    "min-7-3": min_7_3
+    "min-7-3": min_7_3,
+    "dom-3-7": dom_3_7,
+    "dom-7-3": dom_7_3
 }
 
 export function get_set(name) {
