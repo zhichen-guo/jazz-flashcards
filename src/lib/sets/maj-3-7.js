@@ -1,6 +1,7 @@
 const maj_3_7 = {
     name: "Major Chords (3-7 Voicing)",
     slug: "maj-3-7",
+    media: ["C", "F", "Bb", "Eb", "Ab", "Db", "Gb", "B", "E", "A", "D", "G"],
     cards: [
         {
             front: {
@@ -9,7 +10,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/C.png",
+                content: "C",
                 alt: "Treble cleft with E and B."
             }
         },
@@ -20,7 +21,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/F.png",
+                content: "F",
                 alt: "Treble cleft with A and E."
             }
         },
@@ -31,7 +32,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/Bb.png",
+                content: "Bb",
                 alt: "Treble cleft with D and C."
             }
         },
@@ -42,7 +43,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/Eb.png",
+                content: "Eb",
                 alt: "Treble cleft with G and D."
             }
         },
@@ -53,7 +54,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/Ab.png",
+                content: "Ab",
                 alt: "Treble cleft with C and G."
             }
         },
@@ -64,7 +65,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/Db.png",
+                content: "Db",
                 alt: "Treble cleft with F and C."
             }
         },
@@ -75,7 +76,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/Gb.png",
+                content: "Gb",
                 alt: "Treble cleft with B-flat and F."
             }
         },
@@ -86,7 +87,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/B.png",
+                content: "B",
                 alt: "Treble cleft with D-sharp and A-sharp."
             }
         },
@@ -97,7 +98,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/E.png",
+                content: "E",
                 alt: "Treble cleft with G-sharp and D-sharp."
             }
         },
@@ -108,7 +109,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/A.png",
+                content: "A",
                 alt: "Treble cleft with C-sharp and G-sharp."
             }
         },
@@ -119,7 +120,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/D.png",
+                content: "D",
                 alt: "Treble cleft with F-sharp and C-sharp."
             }
         },
@@ -130,7 +131,7 @@ const maj_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/maj-3-7/G.png",
+                content: "G",
                 alt: "Treble cleft with B and F-sharp."
             }
         }

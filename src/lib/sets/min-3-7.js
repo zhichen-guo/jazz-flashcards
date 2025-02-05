@@ -1,6 +1,7 @@
 const min_3_7 = {
     name: "Minor Chords (3-7 Voicing)",
     slug: "min-3-7",
+    media: ["C", "F", "Bb", "Eb", "Gs", "Cs", "Fs", "B", "E", "A", "D", "G"],
     cards: [
         {
             front: {
@@ -9,7 +10,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/C.png",
+                content: "C",
                 alt: "Treble clef with E-flat and B-flat."
             }
         },
@@ -20,7 +21,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/F.png",
+                content: "F",
                 alt: "Treble clef with A-flat and E-flat."
             }
         },
@@ -31,7 +32,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/Bb.png",
+                content: "Bb",
                 alt: "Treble clef with D-flat and A-flat."
             }
         },
@@ -42,7 +43,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/Eb.png",
+                content: "Eb",
                 alt: "Treble clef with G-flat and D-flat."
             }
         },
@@ -53,7 +54,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/Gs.png",
+                content: "Gs",
                 alt: "Treble clef with B and F-sharp."
             }
         },
@@ -64,7 +65,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/Cs.png",
+                content: "Cs",
                 alt: "Treble clef with E and B."
             }
         },
@@ -75,7 +76,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/Fs.png",
+                content: "Fs",
                 alt: "Treble clef with G and E."
             }
         },
@@ -86,7 +87,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/B.png",
+                content: "B",
                 alt: "Treble clef with D and A."
             }
         },
@@ -97,7 +98,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/E.png",
+                content: "E",
                 alt: "Treble clef with G and D."
             }
         },
@@ -108,7 +109,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/A.png",
+                content: "A",
                 alt: "Treble clef with C and G."
             }
         },
@@ -119,7 +120,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/D.png",
+                content: "D",
                 alt: "Treble clef with F and C."
             }
         },
@@ -130,7 +131,7 @@ const min_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/min-3-7/G.png",
+                content: "G",
                 alt: "Treble clef with B-flat and F."
             }
         }

@@ -1,11 +1,12 @@
 const key_signatures = {
     name: "Key Signatures",
 	slug: "key-signatures",
+	media: ["C", "G", "D", "A", "E", "BCb", "GbF", "DbC", "Ab", "Eb", "Bb", "F"],
     cards: [
         {
 			front: {
                 type: "image",
-                content: "/src/lib/assets/key-signatures/C.png",
+                content: "C",
                 alt: "Treble and bass cleft with no sharps or flats."
 			},
 			back: {
@@ -16,7 +17,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/G.png",
+				content: "G",
                 alt: "Treble and bass cleft with sharp F."
 			},
 			back: {
@@ -27,7 +28,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/D.png",
+				content: "D",
                 alt: "Treble and bass cleft with sharp F and C."
 			},
 			back: {
@@ -38,7 +39,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/A.png",
+				content: "A",
                 alt: "Treble and bass cleft with sharp F, C, and G."
 			},
 			back: {
@@ -49,7 +50,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/E.png",
+				content: "E",
                 alt: "Treble and bass cleft with sharp F, C, G, and D."
 			},
 			back: {
@@ -60,7 +61,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/BCb.png",
+				content: "BCb",
                 alt: "One treble and bass cleft with sharp F, C, G, D, and A. Another treble and bass cleft with flat B, E, A, D, G, C, and F."
 			},
 			back: {
@@ -71,7 +72,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/GbF.png",
+				content: "GbF",
                 alt: "One treble and bass cleft with sharp F, C, G, D, A, and E. Another treble and bass cleft with flat B, E, A, D, G, and C."
 			},
 			back: {
@@ -82,7 +83,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/DbC.png",
+				content: "DbC",
                 alt: "One treble and bass cleft with sharp F, C, G, D, A, E, and B. Another treble and bass cleft with flat B, E, A, D, and G."
 			},
 			back: {
@@ -93,7 +94,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/Ab.png",
+				content: "Ab",
                 alt: "Treble and bass cleft with flat B, E, A, and D."
 			},
 			back: {
@@ -104,7 +105,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/Eb.png",
+				content: "Eb",
                 alt: "Treble and bass cleft with flat B, E, and A."
 			},
 			back: {
@@ -115,7 +116,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/Bb.png",
+				content: "Bb",
                 alt: "Treble and bass cleft with flat B, and E."
 			},
 			back: {
@@ -126,7 +127,7 @@ const key_signatures = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/key-signatures/F.png",
+				content: "F",
                 alt: "Treble and bass cleft with flat B"
 			},
 			back: {

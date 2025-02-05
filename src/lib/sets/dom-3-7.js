@@ -1,6 +1,7 @@
 const dom_3_7 = {
     name: "Dominant Chords (3-7 Voicing)",
     slug: "dom-3-7",
+    media: ["C", "F", "Bb", "Eb", "Ab", "Db", "Gb", "B", "E", "A", "D", "G"],
     cards: [
         {
             front: {
@@ -9,7 +10,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/C.png",
+                content: "C",
                 alt: "Treble clef with E and B-flat."
             }
         },
@@ -20,7 +21,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/F.png",
+                content: "F",
                 alt: "Treble clef with A and E-flat."
             }
         },
@@ -31,7 +32,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/Bb.png",
+                content: "Bb",
                 alt: "Treble clef with D and A-flat."
             }
         },
@@ -42,7 +43,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/Eb.png",
+                content: "Eb",
                 alt: "Treble clef with G and D-flat."
             }
         },
@@ -53,7 +54,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/Ab.png",
+                content: "Ab",
                 alt: "Treble clef with C and G-flat."
             }
         },
@@ -64,7 +65,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/Db.png",
+                content: "Db",
                 alt: "Treble clef with F and C-flat."
             }
         },
@@ -75,7 +76,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/Gb.png",
+                content: "Gb",
                 alt: "Treble clef with B-flat and F-flat."
             }
         },
@@ -86,7 +87,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/B.png",
+                content: "B",
                 alt: "Treble clef with D-sharp and A."
             }
         },
@@ -97,7 +98,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/E.png",
+                content: "E",
                 alt: "Treble clef with G-sharp and D."
             }
         },
@@ -108,7 +109,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/A.png",
+                content: "A",
                 alt: "Treble clef with C-sharp and G."
             }
         },
@@ -119,7 +120,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/D.png",
+                content: "D",
                 alt: "Treble clef with F-sharp and C."
             }
         },
@@ -130,7 +131,7 @@ const dom_3_7 = {
             },
             back: {
                 type: "image",
-                content: "/src/lib/assets/dom-3-7/G.png",
+                content: "G",
                 alt: "Treble clef with B and F."
             }
         }

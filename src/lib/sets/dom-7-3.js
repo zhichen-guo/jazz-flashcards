@@ -1,6 +1,7 @@
 const dom_7_3 = {
     name: "Dominant Chords (7-3 Voicing)",
-    slut: "dom-7-3",
+    slug: "dom-7-3",
+    media: ["C", "F", "Bb", "Eb", "Ab", "Db", "Gb", "B", "E", "A", "D", "G"],
     cards: [
         {
             front: {

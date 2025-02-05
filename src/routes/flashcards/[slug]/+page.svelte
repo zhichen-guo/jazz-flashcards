@@ -13,8 +13,20 @@
     let flipped = $state(false);
     let translate_in = -200;
 
-        // Add this function to handle image imports
-    async function getImageUrl(slug, filename) {
+    // Initialize images object
+    let images = $state({});
+
+    // Load images when component mounts
+    $effect(() => {
+        if (data.set.media) {
+            data.set.media.forEach(async (name) => {
+                images[name] = await get_image_url(data.set.slug, name);
+            });
+        }
+    });
+
+    // Add this function to handle image imports
+    async function get_image_url(slug, filename) {
         try {
             const module = await import(`../../../lib/assets/${slug}/${filename}.png`);
             return module.default;
@@ -24,20 +36,8 @@
         }
     }
 
-    // Initialize images object
-    let images = $state({});
-
-    // Load images when component mounts
-    $effect(() => {
-        if (data.set.media) {
-            Object.entries(data.set.media).forEach(async ([key, value]) => {
-                images[key] = await getImageUrl(data.set.slug, value);
-            });
-        }
-    });
-
     // Modify the card_face snippet to use the loaded images
-    function getCardContent(face) {
+    function get_card_content(face) {
         if (face.type === 'image') {
             return images[face.content] || ''; // Use the loaded image URL or fallback
         }
@@ -95,7 +95,7 @@
     {#if face.type == "text"}
         <p>{face.content}</p>
     {:else if face.type == "image"}
-        <img class="h-full w-full object-contain" alt={face.alt} src={getCardContent(face)} />
+        <img class="h-full w-full object-contain" alt={face.alt} src={get_card_content(face)} />
     {/if}
 {/snippet}
 

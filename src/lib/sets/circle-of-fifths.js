@@ -1,11 +1,12 @@
 const circle_of_fifths = {
 	name: "Circle of Fifths",
 	slug: "circle-of-fifths",
+	media: ["C", "G", "D", "A", "E", "BCb", "GbF", "DbC", "Ab", "Eb", "Bb", "F"],
     cards: [
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/C.png",
+				content: "C",
                 alt: "Circle of Fifths with 12 o'clock piece covered."
 			},
 			back: {
@@ -16,7 +17,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/G.png",
+				content: "G",
                 alt: "Circle of Fifths with 1 o'clock piece covered."
 			},
 			back: {
@@ -27,7 +28,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/D.png",
+				content: "D",
                 alt: "Circle of Fifths with 2 o'clock piece covered."
 			},
 			back: {
@@ -38,7 +39,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/A.png",
+				content: "A",
                 alt: "Circle of Fifths with 3 o'clock piece covered."
 			},
 			back: {
@@ -49,7 +50,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/E.png",
+				content: "E",
                 alt: "Circle of Fifths with 4 o'clock piece covered."
 			},
 			back: {
@@ -60,7 +61,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/BCb.png",
+				content: "BCb",
                 alt: "Circle of Fifths with 5 o'clock piece covered."
 			},
 			back: {
@@ -71,7 +72,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/GbF.png",
+				content: "GbF",
                 alt: "Circle of Fifths with 6 o'clock piece covered."
 			},
 			back: {
@@ -82,7 +83,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/DbC.png",
+				content: "DbC",
                 alt: "Circle of Fifths with 7 o'clock piece covered."
 			},
 			back: {
@@ -93,7 +94,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/Ab.png",
+				content: "Ab",
                 alt: "Circle of Fifths with 8 o'clock piece covered."
 			},
 			back: {
@@ -104,7 +105,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/Eb.png",
+				content: "Eb",
                 alt: "Circle of Fifths with 9 o'clock piece covered."
 			},
 			back: {
@@ -115,7 +116,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/Bb.png",
+				content: "Bb",
                 alt: "Circle of Fifths with 10 o'clock piece covered."
 			},
 			back: {
@@ -126,7 +127,7 @@ const circle_of_fifths = {
         {
 			front: {
 				type: "image",
-				content: "/src/lib/assets/circle-of-fifths/F.png",
+				content: "F",
                 alt: "Circle of Fifths with 11 o'clock piece covered."
 			},
 			back: {
