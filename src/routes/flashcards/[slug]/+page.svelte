@@ -5,11 +5,6 @@
     import { fly, scale } from "svelte/transition";
     import { Piano } from "svelte-piano";
     const { data } = $props();
-    const images = Object.fromEntries(
-        Object.entries(data.set.media).map(
-            async ([key, value]) => [key, await import(`$lib/assets/${data.set.slug}/${value}.png`)]
-        )
-    )
     let shuffled = $state(false);
     let reversed = $state(false);
     let index = $state(0);
@@ -17,6 +12,37 @@
     let card = $derived(cards[index]);
     let flipped = $state(false);
     let translate_in = -200;
+
+        // Add this function to handle image imports
+    async function getImageUrl(slug, filename) {
+        try {
+            const module = await import(`../../../lib/assets/${slug}/${filename}.png`);
+            return module.default;
+        } catch (error) {
+            console.error('Error loading image:', error);
+            return ''; // or a default image URL
+        }
+    }
+
+    // Initialize images object
+    let images = $state({});
+
+    // Load images when component mounts
+    $effect(() => {
+        if (data.set.media) {
+            Object.entries(data.set.media).forEach(async ([key, value]) => {
+                images[key] = await getImageUrl(data.set.slug, value);
+            });
+        }
+    });
+
+    // Modify the card_face snippet to use the loaded images
+    function getCardContent(face) {
+        if (face.type === 'image') {
+            return images[face.content] || ''; // Use the loaded image URL or fallback
+        }
+        return face.content;
+    }
 
     let progress = new Tween(0, {
         easing: cubicOut
@@ -69,7 +95,7 @@
     {#if face.type == "text"}
         <p>{face.content}</p>
     {:else if face.type == "image"}
-        <img class="h-full w-full object-contain" alt={face.alt} src={face.content} />
+        <img class="h-full w-full object-contain" alt={face.alt} src={getCardContent(face)} />
     {/if}
 {/snippet}
 
