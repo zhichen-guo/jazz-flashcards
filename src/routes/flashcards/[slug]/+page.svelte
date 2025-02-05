@@ -131,7 +131,7 @@
         </div>
 
         <div class="grid grid-cols-12 gap-x-3 pt-3 w-96">
-            <p class="col-span-12 text-center text-gray-500 mb-3">click on the card or use (X) to flip the card</p>
+            <p class="col-span-12 text-center text-gray-500 mb-3">click on the card or use (S) to flip the card</p>
             <div class="col-span-2 text-center">
                 <p>{index + 1} / {data.set.size}</p>
             </div>
@@ -149,7 +149,7 @@
         </div>
     </div>
     <button onclick={(event) => {event.target.blur(); change_card("forward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        <span class="opacity-75">(C)</span> &#8594;
+        <span class="opacity-75">(X)</span> &#8594;
     </button>
 </div>
 
