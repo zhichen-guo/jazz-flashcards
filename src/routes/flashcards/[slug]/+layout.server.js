@@ -7,6 +7,7 @@ export function load({ params }) {
     if (!set) error(404);
     
     set.size = set.cards.length;
+    set.reversed = set.cards.map((card) => {return {front: card.back, back: card.front}})
     
     return { 
         set

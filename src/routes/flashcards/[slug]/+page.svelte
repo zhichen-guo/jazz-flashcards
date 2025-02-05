@@ -6,6 +6,7 @@
     import { Piano } from "svelte-piano";
     const { data } = $props();
     let shuffled = $state(false);
+    let reversed = $state(false);
     let index = $state(0);
     let cards = $state(data.set.cards);
     let card = $derived(cards[index]);
@@ -28,26 +29,34 @@
         progress.target = index;
     }
 
-    function onkeydown(event) {
-        switch(event.keyCode) {
-            case 90:
-                change_card("backward")
-                break;
-            case 67:
-                change_card("forward")
-                break;
-            case 88:
-                flipped = !flipped;
-                break;
-        }
-    }    
+    const KEY_ACTIONS = {
+        90: () => change_card("backward"),  // Z key
+        88: () => change_card("forward"),   // C key
+        83: () => flipped = !flipped        // S key
+    };
 
-    function shuffle() {
-        cards = shuffled ? data.set.cards : shuffle_cards(data.set.cards);
-        shuffled = !shuffled;
+    function onkeydown(event) {
+        const action = KEY_ACTIONS[event.keyCode];
+        if (action) action();
+    } 
+
+    function updateCards() {
+        const cardSet = reversed ? data.set.reversed : data.set.cards;
+        cards = shuffled ? shuffle_cards(cardSet) : cardSet;
+        
         flipped = false;
         index = 0;
         progress.target = 0;
+    }
+
+    function shuffle() {
+        shuffled = !shuffled;
+        updateCards();
+    }
+
+    function reverse() {
+        reversed = !reversed;
+        updateCards();
     }
 </script>
 
@@ -60,13 +69,13 @@
 {/snippet}
 
 <h1 class="text-3xl font-bold text-center pt-8 pb-5">{data.set.name}</h1>
-<div class="flex items-center justify-center gap-x-5 pb-8">
+<div class="flex items-center justify-center gap-x-5">
     <button onclick={(event) => {event.target.blur(); change_card("backward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         &#8592; <span class="opacity-75">(Z)</span>
     </button>
     <div>
         <div class="relative h-60 w-96" onclick={(event) => {event.target.blur(); flipped = !flipped;}}>
-            {#key shuffled}
+            {#key [shuffled, reversed]}
                 <div in:scale={{ start: 0.3, opacity: 0.1 }} out:scale={{ start: 0.3, opacity: 0.1 }}>
                 {#key card}
                     <div class="absolute top-0" role="switch" in:fly={{ x: -translate_in }} out:fly={{ x: translate_in }}>
@@ -90,17 +99,21 @@
             {/key}
         </div>
 
-        <div class="grid grid-cols-12 gap-3 pt-3 w-96">
-            <p class="col-span-12 text-center text-gray-500">click on the card or use (X) to flip the card</p>
+        <div class="grid grid-cols-12 gap-x-3 pt-3 w-96">
+            <p class="col-span-12 text-center text-gray-500 mb-3">click on the card or use (X) to flip the card</p>
             <div class="col-span-2 text-center">
                 <p>{index + 1} / {data.set.size}</p>
             </div>
             <div class="col-span-7">
                 <progress class="w-full h-3 rounded" max={data.set.size - 1} value={progress.current}></progress>
             </div>
-            <div class="col-span-3 text-right">
+            <div class="col-span-3 text-left">
                 <input type="checkbox" name="shuffle" checked={shuffled} onclick={(event) => {event.target.blur(); shuffle()}}/>
                 <label for="shuffle">Shuffle</label>
+            </div>
+            <div class="col-span-3 col-start-10 text-left">
+                <input type="checkbox" name="reverse" checked={reversed} onclick={(event) => {event.target.blur(); reverse()}}/>
+                <label for="reverse">Reverse</label>
             </div>
         </div>
     </div>
