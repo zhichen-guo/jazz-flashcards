@@ -5,6 +5,7 @@
     import { fly, scale } from "svelte/transition";
     import { Piano } from "svelte-piano";
     const { data } = $props();
+    //const images = import.meta.glob(`$lib/assets/${data.set.slug}/**.png`, {eager: true});
     let shuffled = $state(false);
     let reversed = $state(false);
     let index = $state(0);
@@ -64,7 +65,9 @@
     {#if face.type == "text"}
         <p>{face.content}</p>
     {:else if face.type == "image"}
-        <img class="h-full w-full object-contain" alt={face.alt} src={face.content} />
+        {#await import(face.content) then {default: src}}
+            <img class="h-full w-full object-contain" alt={face.alt} {src} />
+        {/await}
     {/if}
 {/snippet}
 

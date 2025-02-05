@@ -1,5 +1,6 @@
 const key_signatures = {
     name: "Key Signatures",
+	slug: "key-signatures",
     cards: [
         {
 			front: {

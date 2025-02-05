@@ -1,5 +1,6 @@
 const dom_3_7 = {
     name: "Dominant Chords (3-7 Voicing)",
+    slug: "dom-3-7",
     cards: [
         {
             front: {

@@ -1,5 +1,6 @@
 const min_7_3 = {
     name: "Minor Chords (7-3 Voicing)",
+    slug: "min-7-3",
     cards: [
         {
             front: {

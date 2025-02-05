@@ -1,5 +1,6 @@
 const circle_of_fifths = {
 	name: "Circle of Fifths",
+	slug: "circle-of-fifths",
     cards: [
         {
 			front: {

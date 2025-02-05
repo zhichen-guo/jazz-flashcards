@@ -1,5 +1,6 @@
 const maj_7_3 = {
     name: "Major Chords (7-3 Voicing)",
+    slug: "maj-7-3",
     cards: [
         {
             front: {
