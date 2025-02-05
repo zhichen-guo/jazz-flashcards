@@ -40,7 +40,7 @@
         if (action) action();
     } 
 
-    function updateCards() {
+    function change_set() {
         const cardSet = reversed ? data.set.reversed : data.set.cards;
         cards = shuffled ? shuffle_cards(cardSet) : cardSet;
         
@@ -51,12 +51,12 @@
 
     function shuffle() {
         shuffled = !shuffled;
-        updateCards();
+        change_set();
     }
 
     function reverse() {
         reversed = !reversed;
-        updateCards();
+        change_set();
     }
 </script>
 
