@@ -1,6 +1,20 @@
 const circle_of_fifths = {
 	name: "Circle of Fifths",
 	slug: "circle-of-fifths",
+	media: {
+		"/src/lib/assets/circle-of-fifths/C.png": "C",
+		"/src/lib/assets/circle-of-fifths/G.png": "G",
+		"/src/lib/assets/circle-of-fifths/D.png": "D",
+		"/src/lib/assets/circle-of-fifths/A.png": "A",
+		"/src/lib/assets/circle-of-fifths/E.png": "E",
+		"/src/lib/assets/circle-of-fifths/BCb.png": "BCb",
+		"/src/lib/assets/circle-of-fifths/GbF.png": "GbF",
+		"/src/lib/assets/circle-of-fifths/DbC.png": "DbC",
+		"/src/lib/assets/circle-of-fifths/Ab.png": "Ab",
+		"/src/lib/assets/circle-of-fifths/Eb.png": "Eb",
+		"/src/lib/assets/circle-of-fifths/Bb.png": "Bb",
+		"/src/lib/assets/circle-of-fifths/F.png": "F"
+	},
     cards: [
         {
 			front: {
