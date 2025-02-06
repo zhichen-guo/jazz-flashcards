@@ -14,5 +14,5 @@ export default defineConfig({
         ]
     },
 
-    assetsInclude: ['**/*.png']
+    assetsInclude: ['**/*.avif']
 });

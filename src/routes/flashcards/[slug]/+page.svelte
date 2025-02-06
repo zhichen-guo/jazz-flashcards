@@ -28,7 +28,7 @@
     // Add this function to handle image imports
     async function get_image_url(slug, filename) {
         try {
-            const module = await import(`../../../lib/assets/${slug}/${filename}.png`);
+            const module = await import(`../../../lib/assets/${slug}/${filename}.avif`);
             return module.default;
         } catch (error) {
             console.error('Error loading image:', error);
