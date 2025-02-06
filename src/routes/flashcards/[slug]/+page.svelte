@@ -157,4 +157,8 @@
 	<Piano --height="310px" --width="794px"/>
 </div>
 
+<div class="w-full text-center text-slate-400">
+    Thank you for using this app :). Would you consider leaving some feedback, flashcard requests, or appreciation <a class="text-blue-500" href="https://forms.gle/T2mR5cFaqhfhyNYZ9">in this short from</a>?
+</div>
+
 <svelte:window {onkeydown} />

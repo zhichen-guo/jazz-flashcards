@@ -1,4 +1,4 @@
-<div class="h-screen flex items-center justify-center">
+<div class="h-full flex items-center justify-center">
     <div>
         <h1 class="text-3xl font-bold underline text-center">Intro to Jazz Flashcards</h1>
         <div class="mt-5 text-center">
