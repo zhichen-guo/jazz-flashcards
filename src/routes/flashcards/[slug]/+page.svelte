@@ -101,7 +101,7 @@
 
 <h1 class="text-3xl font-bold text-center pt-8 pb-5">{data.set.name}</h1>
 <div class="flex items-center justify-center gap-x-5">
-    <button onclick={(event) => {event.target.blur(); change_card("backward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button onclick={(event) => {event.target.blur(); change_card("backward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden md:inline">
         &#8592; <span class="opacity-75">(Z)</span>
     </button>
     <div>
@@ -130,15 +130,17 @@
             {/key}
         </div>
 
-        <div class="grid grid-cols-12 gap-x-3 pt-3 w-96">
-            <p class="col-span-12 text-center text-gray-500 mb-3">click on the card or use (S) to flip the card</p>
-            <div class="col-span-2 text-center">
+        <div class="grid grid-cols-12 pt-3 w-96 gap-x-3">
+            <p class="col-span-12 text-center text-gray-500 mb-3 hidden md:inline">click on the card or use (S) to flip the card</p>
+            <button class="col-span-6 bg-blue-500 py-2 rounded text-white font-bold md:hidden" onclick={(event) => {event.target.blur(); change_card("backward")}}>&#8592;</button>
+            <button class="col-span-6 bg-blue-500 py-2 rounded text-white font-bold md:hidden" onclick={(event) => {event.target.blur(); change_card("forward")}}>&#8594;</button>
+            <div class="col-span-2 text-center pt-2 md:pt-0">
                 <p>{index + 1} / {data.set.size}</p>
             </div>
-            <div class="col-span-7">
+            <div class="col-span-7 pt-2 md:pt-0">
                 <progress class="w-full h-3 rounded" max={data.set.size - 1} value={progress.current}></progress>
             </div>
-            <div class="col-span-3 text-left">
+            <div class="col-span-3 text-left pt-2 md:pt-0">
                 <input type="checkbox" name="shuffle" checked={shuffled} onclick={(event) => {event.target.blur(); shuffle()}}/>
                 <label for="shuffle">Shuffle</label>
             </div>
@@ -148,7 +150,7 @@
             </div>
         </div>
     </div>
-    <button onclick={(event) => {event.target.blur(); change_card("forward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button onclick={(event) => {event.target.blur(); change_card("forward")}} class="col-span-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden md:inline">
         <span class="opacity-75">(X)</span> &#8594;
     </button>
 </div>
